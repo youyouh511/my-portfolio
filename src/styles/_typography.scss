@@ -6,7 +6,13 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-h1,
+h1 {
+    font-family: 'Helvetica';
+    font-weight: normal;
+    color: var(--color-text-heading);
+    transition: color 0.2s ease;
+}
+
 h2,
 h3,
 h4,

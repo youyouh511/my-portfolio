@@ -42,6 +42,7 @@ export const portfolioData = {
                 { name: "Git", icon: "mdi:git" },
                 { name: "Docker", icon: "mdi:docker" },
                 { name: "Flask", icon: "file-icons:flask" },
+                { name: "React", icon: "mdi:react"},
                 { name: "MongoDB", icon: "lineicons:mongodb" },
                 { name: "LangChain", icon: "simple-icons:langchain" },
                 { name: "Tableau", icon: "cib:tableau" },
@@ -86,7 +87,46 @@ export const portfolioData = {
         },
     ],
 
-    education: {},
+    education: [
+        {
+            school: "Carnegie Mellon University, Heinz College",
+            location: "Pittsburgh, PA, USA",
+            degree: "Master of Information Systems Management (STEM)",
+            duration: "Aug 2024 – Aug 2025",
+            coursework: [
+                "Statistics",
+                "Deep Learning",
+                "Natural Language Processing",
+                "Object-Oriented Programming in Java",
+                "Distributed Systems",
+                "Data Structures & Algorithms",
+                "Blockchain Fundamentals",
+                "Agile Methods",
+                "Managing Software Platforms",
+                "Responsible AI",
+            ],
+            highlight:
+                "Highest Distinction",
+            logo: "/cmu_logo.jpg",
+        },
+        {
+            school: "Georgetown University, School of Foreign Service",
+            location: "Washington, D.C., USA",
+            degree: "Bachelor of Science in Foreign Service, International Economics",
+            duration: "Aug 2015 – May 2019",
+            coursework: [
+                "Econometrics",
+                "Economics of Law",
+                "Game Theory",
+                "Development Economics",
+                "International Finance",
+                "Japanese (JLPT N1 Certified)",
+            ],
+            highlight: "",
+            logo: "/gu_logo.png",
+        }
+    ],
+
     projects: {},
     publications: {},
 };

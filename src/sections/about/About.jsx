@@ -1,4 +1,3 @@
-// src/sections/about/About.jsx
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import Lottie from "lottie-react";
@@ -8,7 +7,7 @@ import { portfolioData } from "../../data/portfolioData";
 import "./About.scss";
 
 const About = () => {
-  
+
   // Check existence of data
   const aboutData = portfolioData?.about;
 
@@ -77,7 +76,6 @@ const About = () => {
         </div>
       </div>
 
-      <hr className='divider' />
       {/* ----- SECOND ROW: SKILLS SECTION -----*/}
       {skills && (
         <div className="skills-row">
@@ -103,6 +101,7 @@ const About = () => {
           </div>
         </div>
       )}
+      <hr className='divider' />
     </section>
   );
 };

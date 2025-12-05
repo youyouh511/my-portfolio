@@ -1,4 +1,3 @@
-// src/sections/work/Work.jsx
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { portfolioData } from "../../data/portfolioData";
@@ -145,6 +144,7 @@ const Work = () => {
                     })}
                 </div>
             </div>
+            <hr className='divider' />
         </section>
     );
 };

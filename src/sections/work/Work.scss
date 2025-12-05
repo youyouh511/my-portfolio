@@ -5,13 +5,14 @@
 }
 
 .work-inner {
-    max-width: 1600px;
     margin: 0 auto;
+    max-width: 1100px;
 }
 
 .work-heading {
     font-size: 2.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
 }
 
 .work-grid {
@@ -38,12 +39,10 @@
     transition: transform 0.2s ease;
 }
 
-/* Optional: subtle style for expanded (no width change) */
 .work-card.expanded {
     background-color: var(--color-bg-pop);
 }
 
-/* Overlapping logo circle */
 .work-card-logo {
     position: absolute;
     left: -3rem;
@@ -58,7 +57,6 @@
     justify-content: center;
 }
 
-/* Layers inside logo circle */
 .work-logo-layer {
     position: absolute;
     inset: 0;
@@ -69,7 +67,6 @@
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-/* Default logo (always the base state) */
 .logo-main {
     opacity: 1;
 }
@@ -85,7 +82,6 @@
     font-weight: 600;
 }
 
-/* Toggle layer shown on hover – arrow + text */
 .logo-toggle {
     opacity: 0;
     border: none;
@@ -106,7 +102,6 @@
     }
 }
 
-/* Hover behavior: swap main logo for toggle (for both collapsed & expanded) */
 .work-card:hover {
     .logo-main {
         opacity: 0;
@@ -123,12 +118,11 @@
     opacity: 1;
 }
 
-/* Header: only company name always visible */
 .work-card-header {
     display: flex;
     flex: 1;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding-left: 2rem;
 }
 
@@ -136,30 +130,26 @@
     font-weight: 600;
 }
 
-/* Meta row: only when expanded */
 .work-card-subheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* keeps left column vertically centered */
     padding-inline: 2rem;
     gap: 1rem;
 }
 
-/* Left column: only the position */
 .subheader-left {
     flex: 1;
     display: flex;
     align-items: center;
 }
 
-/* Right column: location & duration stacked vertically */
 .subheader-right {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* right-aligned to keep clean edge */
+
     gap: 0.35rem;
     text-align: right;
 }
@@ -174,7 +164,8 @@
 }
 
 .work-position {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--color-highlight);
 }
 
 .work-location,
@@ -219,19 +210,19 @@
     left: -0.9rem;
 }
 
-// /* Responsive tweaks */
-// @media (max-width: 768px) {
-//     .work-card {
-//         padding-left: 2.2rem;
-//     }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .work-card {
+        padding-left: 2.2rem;
+    }
 
-//     .work-card-logo {
-//         left: -1.5rem;
-//     }
+    .work-card-logo {
+        left: -1.5rem;
+    }
 
-//     .work-card-header,
-//     .work-card-subheader {
-//         flex-direction: column;
-//         align-items: flex-start;
-//     }
-// }
+    .work-card-header,
+    .work-card-subheader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

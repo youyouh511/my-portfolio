@@ -1,14 +1,14 @@
 section {
-    padding: 4rem 2rem;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
     min-height: 100vh;
-    border-bottom: 1px solid var(--color-border);
 }
 
 .text-center {
     text-align: center;
 }
 
-hr {
+.divider {
     width: 20%;
     border: none;
     border-top: 1px dashed var(--color-border);

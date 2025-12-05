@@ -1,12 +1,9 @@
-@use '../../styles/palette';
-
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
     z-index: 1000;
 }
 
@@ -24,40 +21,48 @@
 }
 
 .navlist li a {
-    color: var(--color-text-2);
-    text-decoration: none;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
+  /* --- DEFAULT STATE --- */
+  color: var(--color-text-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transition: color 0.3s ease;
+
+  /* default icon: invisible + dim color */
+  .navicon {
+    font-size: 1.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+
+    opacity: 0;
+    color: var(--color-text-dim);
+    transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* --- HOVER STATE --- */
+  &:hover {
+    color: var(--color-text-pop);
 
     .navicon {
-        font-size: 1.4rem;
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-right: 6px;
-        
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 1;
+      color: var(--color-text-pop);
+      transform: scale(1.1);
     }
+  }
 
+  /* --- ACTIVE STATE (when scrolling) --- */
+  &.active {
+    color: var(--color-highlight);
+    font-weight: 600;
 
-    &:hover,
-    &.active {
-        color: var(--color-text);
-
-        .navicon {
-            opacity: 1;
-            transform: scale(1.1);
-        }
+    .navicon {
+      opacity: 1;
+      color: var(--color-highlight);
+      transform: scale(1.12);
     }
-
-    &:hover {
-        text-decoration-line: underline overline;
-        text-decoration-style: dashed;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 6px;
-        text-decoration-skip-ink: none;
-    }
+  }
 }

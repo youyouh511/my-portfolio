@@ -7,3 +7,12 @@ section {
 .text-center {
     text-align: center;
 }
+
+hr {
+    width: 20%;
+    border: none;
+    border-top: 1px dashed var(--color-border);
+    margin: 2rem auto;
+    opacity: 1;
+    align-items: center;
+}

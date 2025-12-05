@@ -1,15 +1,24 @@
+@use './palette' as *;
+
 // Default: light mode
 :root {
   /* Light mode */
   --color-bg: #{$light-2};
-  --color-text: #{$dark-1};
-  --color-text-2: #{$dark-2};
+  --color-bg-dim: #{$light-3};
+  --color-bg-pop: #{$light-1};
 
-  --color-heading: #{$dark-3};
-  --color-border: #{$dark-2};
+  --color-text-heading: #{$dark-1};
+  --color-text: #{$dark-2};
+  --color-text-dim: #{$dark-3};
+  --color-text-pop: #{$dark-1};
 
-  --color-link: #{$dark-mid-2};
-  --color-link-hover: #{$dark-mid-1};
+  --color-highlight: #{$highlight-dk};
+  --color-highlight-dim: #{$highlight-lt};
+
+  --color-border: #{$highlight-dk};
+
+  --color-link: #{$link-1};
+  --color-link-hover: #{$link-2};
 }
 
 
@@ -17,13 +26,20 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #{$dark-2};
-    --color-text: #{$light-1};
-    --color-text-2: #{$light-2};
+    --color-bg-dim: #{$dark-1};
+    --color-bg-pop: #{$dark-3};
 
-    --color-heading: #{$light-3};
-    --color-border: #{$light-2};
+    --color-text-heading: #{$light-1};
+    --color-text: #{$light-2};
+    --color-text-dim: #{$light-3};
+    --color-text-pop: #{$light-1};
 
-    --color-link: #{$light-mid-2};
-    --color-link-hover: #{$light-mid-1};
+    --color-highlight: #{$highlight-lt};
+    --color-highlight-dim: #{$highlight-dk};
+
+    --color-border: #{$highlight-lt};
+
+    --color-link: #{$link-2};
+    --color-link-hover: #{$link-1};
   }
 }

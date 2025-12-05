@@ -77,6 +77,7 @@ const About = () => {
         </div>
       </div>
 
+      <hr className='divider' />
       {/* ----- SECOND ROW: SKILLS SECTION -----*/}
       {skills && (
         <div className="skills-row">
@@ -92,7 +93,7 @@ const About = () => {
 
           {/* RIGHT: BULLETS */}
           <div className="skills-bullets">
-            <h3 className="skills-title">{skills.summaryTitle}</h3>
+            <h1 className="skills-title">{skills.summaryTitle}</h1>
 
             <ul>
               {skills.summaryBullets.map((item, idx) => (

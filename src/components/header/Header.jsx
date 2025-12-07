@@ -7,8 +7,8 @@ import { Icon } from '@iconify/react';
 const sections = [
     { id: 'about', label: 'About', icon: 'material-symbols:person-raised-hand-rounded' },
     { id: 'education', label: 'Education', icon: 'ic:round-school' },
-    { id: 'work', label: 'Work', icon: 'streamline-ultimate:work-from-home-user-pet-cat-bold' },
     { id: 'projects', label: 'Projects', icon: 'mdi:folder-multiple' },
+    { id: 'work', label: 'Work', icon: 'streamline-ultimate:work-from-home-user-pet-cat-bold' },
     { id: 'publications', label: 'Publications', icon: 'streamline-plump:news-paper-solid' }
 ];
 

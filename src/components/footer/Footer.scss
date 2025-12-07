@@ -1,0 +1,29 @@
+.site-footer {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-bg-dim);
+
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-link-hover);
+      text-decoration: underline;
+    }
+  }
+}

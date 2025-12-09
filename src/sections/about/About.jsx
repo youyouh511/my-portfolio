@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 
 import { portfolioData } from "../../data/portfolioData";
 import "./About.scss";
+import PillsCollection from "../../components/pills/PillsCollection";
 
 const About = () => {
 
@@ -13,7 +14,7 @@ const About = () => {
 
   if (!aboutData) {
     return (
-      <section id="about" className="about-section">
+      <section id="about" className="about">
         <h1>Missing Intro</h1>
         <p>Sorry...I am still rehearsing my opening speech.</p>
         <p>Please come back another time.</p>
@@ -38,11 +39,11 @@ const About = () => {
 
   // Content display
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about">
       {/* ----- FIRST ROW: INTRO + LOTTIE AVATAR ----- */}
-      <div className="about-content">
+      <div className="about_content">
         {/* LEFT: INTRO TEXT */}
-        <div className="about-text">
+        <div className="about_intro">
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
 
@@ -50,7 +51,7 @@ const About = () => {
             <ReactMarkdown key={idx}>{p}</ReactMarkdown>
           ))}
 
-          <div className="contact-icons">
+          <div className="contact_icons">
             <a href={`mailto:${contact.email}`} aria-label="email">
               <Icon icon="mdi:email" />
             </a>
@@ -64,13 +65,13 @@ const About = () => {
         </div>
 
         {/* RIGHT: LOTTIE ANIMATION */}
-        <div className="about-animation">
+        <div className="about_animation">
           {animationData && (
             <Lottie
               animationData={animationData}
               loop
               autoplay
-              className="about-lottie"
+              className="about_lottie"
             />
           )}
         </div>
@@ -78,20 +79,19 @@ const About = () => {
 
       {/* ----- SECOND ROW: SKILLS SECTION -----*/}
       {skills && (
-        <div className="skills-row">
+        <div className="skills">
           {/* LEFT: ICON GRID */}
-          <div className="skills-icons">
-            {skills.techStack.map((tech) => (
-              <div className="skill-pill" key={tech.name}>
-                <Icon icon={tech.icon} className="skill-icon" />
-                <span>{tech.name}</span>
-              </div>
-            ))}
+          <div className="skills_pills">
+            <PillsCollection
+                title='Tech Stack'
+                items={skills.techStack}
+                layout='grid'
+            />
           </div>
 
           {/* RIGHT: BULLETS */}
-          <div className="skills-bullets">
-            <h1 className="skills-title">{skills.summaryTitle}</h1>
+          <div className="skills_bullets">
+            <h1 className="skills_title">{skills.summaryTitle}</h1>
 
             <ul>
               {skills.summaryBullets.map((item, idx) => (

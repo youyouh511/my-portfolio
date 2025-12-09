@@ -1,179 +1,103 @@
-.edu-section {
-    min-height: auto; // match Work behavior
+.edu_section {
+    min-height: auto;
 }
 
-.edu-inner {
-    margin: 0 auto;
-    max-width: 1100px; // align with .work-inner
-}
+.edu_title {}
 
-.edu-heading {
-    font-size: 2.5rem; // align with .work-heading
-    margin-bottom: 3rem;
-}
+.edu_cards {
 
-.edu-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem; // same spacing as .work-grid
-}
+    .infoCard {
+        margin: 0;
+        border-radius: 0;
+        gap: 0.5rem;
+        background-color: var(--color-bg);
+        border: 2px solid var(--color-bg);
 
-.edu-card {
-    position: relative;
-    border: 2px solid var(--color-bg-pop);
-    border-radius: 12px;
-    padding: 1.5rem 3rem 1.5rem 3rem;
-    min-height: 100px;
-    background-color: var(--color-bg);
-    backdrop-filter: blur(4px);
+        &:hover {
+            background-color: var(--color-bg);
+            border: 2px solid var(--color-bg);
+            box-shadow: none;
 
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
+            .underliner::before {
+                width: 100%;
+            }
 
+            .underliner::after {
+                width: 0%;
+            }
+        }
 
-.edu-card-logo {
-    position: absolute;
-    left: -3rem;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background-color: var(--color-bg-pop);
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.edu-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.edu-logo-fallback {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.edu-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-}
-
-.edu-school {
-    font-weight: 600;
-}
+        .underliner {
+            position: relative;
+            width: 100%;
+            height: 1px;
+            margin: 1.5rem 0 0 0;
 
 
-.edu-card-subheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 2rem;
-    gap: 1rem;
-}
-
-.subheader-left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.subheader-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-    gap: 0.35rem;
-    text-align: right;
-}
-
-.edu-degree,
-.edu-location,
-.edu-duration {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-size: 0.95rem;
-}
-
-.edu-degree {
-    font-size: 1.1rem;
-    color: var(--color-highlight);
-}
-
-.edu-location,
-.edu-duration {
-    color: var(--color-text-dim);
-}
+            border: none;
+            border-top: 1px dashed var(--color-border-dim);
+            opacity: 1;
 
 
-.edu-meta-icon {
-    font-size: 1rem;
-}
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 3px;
 
+                background: var(--color-highlight-dim);
+                width: 0%;
+                transition: width 0.5s ease;
+            }
 
-.edu-coursework {
-    margin-top: 0.75rem;
-    padding-inline: 3rem;
-}
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 3px;
 
-.edu-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--color-text-dim);
-    margin-bottom: 0.4rem;
-    text-align: left;
-}
+                background: var(--color-bg-pop);
+                width: 100%;
+                transition: width 0.5s ease;
+            }
+        }
 
-.edu-coursework-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-}
+        .infoCard_headerText {
+            margin: 0;
+            font-size: 1.75rem;
+        }
 
-.edu-coursework-pill {
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    background-color: var(--color-bg-pop);
-    font-size: 0.8rem;
-}
+        .infoCard_subheader {
+            margin: 0;
 
-.edu-highlight {
-    margin-top: 0.75rem;
-    padding-inline: 3rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-align: left;
-}
+            .infoCard_subheaderCol-1 {
+                color: var(--color-highlight);
+            }
 
-@media (max-width: 768px) {
-    .edu-card {
-        padding-left: 2.2rem;
-    }
+            .infoCard_subheaderCol-2 {
+                align-items: flex-end;
+                color: var(--color-text-dim);
+            }
 
-    .edu-card-logo {
-        left: -1.5rem;
-    }
+            .infoCard_subheaderItem {
+                font-size: 1rem;
+            }
+        }
 
-    .edu-card-header,
-    .edu-card-subheader {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        .infoCard_pills {
+            margin-top: 0;
 
-    .edu-location,
-    .edu-duration {
-        font-size: 0.85rem;
+            .pills_title {
+                margin-top: 0;
+                text-align: left;
+            }
+        }
+
+        .infoCard_paragraph {
+            margin: 0;
+            margin-top: 1.5rem;
+        }
     }
 }

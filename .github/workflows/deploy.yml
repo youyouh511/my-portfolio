@@ -40,7 +40,7 @@ jobs:
         run: npm run build
         env:
           # [Edit] base path for production
-          VITE_BASE_PATH: /portfolio/
+          VITE_BASE_PATH: /my-portfolio/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

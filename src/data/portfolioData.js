@@ -62,23 +62,23 @@ export const portfolioData = {
             duration: "Jul 2019 — Jun 2023",
             bullets: [
                 {
-                    text: "Maintained and enhanced the Common Surveillance Databases, a critical data infrastructure supporting the IMF’s institutional analytics ecosystem, through automation, pipeline optimization, methodological updates, and data audits."
+                    text: "Maintained and enhanced the Common Surveillance Databases, a critical data infrastructure supporting the IMF's institutional analytics ecosystem, through automation, pipeline optimization, methodological updates, and data audits."
                 },
                 {
                     text: "Provided analytical and data support for five World Economic Outlook (WEO) chapters, focusing on global macroeconomic trends, forecasting, cross-country analysis, and policy recommendations.",
                     sub: [
-                        "Co-authored an IMF Working Paper, constructing a harmonized 38-country, 60-year dataset and developing time-series models to decompose wage growth drivers and forecast post-shock wage–price dynamics.",
-                        "Transformed longitudinal microdata (IPUMS CPS, EU LFS) to evaluate COVID-19’s labor market impacts across demographics and industries, informing policy decisions on job retention and reallocation."
+                        "Co-authored an IMF Working Paper, constructing a harmonized 38-country, 60-year dataset and developing time-series models to decompose wage growth drivers and forecast post-shock wage-price dynamics.",
+                        "Transformed longitudinal microdata (IPUMS CPS, EU LFS) to evaluate COVID-19's labor market impacts across demographics and industries, informing policy decisions on job retention and reallocation."
                     ]
                 },
                 {
-                    text: "Automated ETL pipelines in Python and Stata to standardize data updates and workflows across research teams, reducing onboarding time by 1–2 days, improving knowledge transfer, and enhancing data integrity."
+                    text: "Automated ETL pipelines in Python and Stata to standardize data updates and workflows across research teams, reducing onboarding time by 1 to 2 days, improving knowledge transfer, and enhancing data integrity."
                 },
                 {
                     text: "Designed modular, user-friendly Excel-based validation and visualization toolkits integrated into the Global Economic Environment (GEE) database stack, cutting cross-departmental turnaround from days to hours."
                 },
                 {
-                    text: "Produced executive-level analytics and presentations on Energy Transition and the 2023 Banking Crisis under tight deadlines for the IMF’s Early Warning Exercise, strengthening institutional risk assessments."
+                    text: "Produced executive-level analytics and presentations on Energy Transition and the 2023 Banking Crisis under tight deadlines for the IMF's Early Warning Exercise, strengthening institutional risk assessments."
                 },
                 {
                     text: "Mentored four new hires, formalizing best practices in database management, documentation, and reproducibility."
@@ -92,7 +92,7 @@ export const portfolioData = {
             school: "Carnegie Mellon University, Heinz College",
             location: "Pittsburgh, PA, USA",
             degree: "Master of Information Systems Management (STEM)",
-            duration: "Aug 2024 – Aug 2025",
+            duration: "Aug 2024 - Aug 2025",
             coursework: [
                 "Statistics",
                 "Deep Learning",
@@ -113,7 +113,7 @@ export const portfolioData = {
             school: "Georgetown University, School of Foreign Service",
             location: "Washington, D.C., USA",
             degree: "Bachelor of Science in Foreign Service, International Economics",
-            duration: "Aug 2016 – May 2019",
+            duration: "Aug 2016 - May 2019",
             coursework: [
                 "Econometrics",
                 "Economics of Law",
@@ -155,8 +155,12 @@ export const portfolioData = {
                 "Led system design discussions and coordinated cross-functional development across data processing, visualization, and strategic framing.",
                 "Co-authored the final report and presentation materials for the client partner."
             ],
-            resourcesLink:
-                "mailto:youyouh511@gmail.com?subject=ODD%20Safety%20Visualization%20Tool%20-%20Demo%20Request"
+            actionButton: {
+                href: "mailto:youyouh511@gmail.com?subject=ODD%20Safety%20Visualization%20Tool%20-%20Demo%20Request",
+                label: 'Request Demo',
+                icon: 'mdi:email-send-outline'
+            }
+
         },
 
         {
@@ -175,15 +179,18 @@ export const portfolioData = {
                 "Prompt Engineering"
             ],
             summary:
-                "Explored training-free product recommendation using dense retrieval, collaborative filtering, and large language models (LLMs), grounded in DeepMind’s STAR framework.",
+                "Explored training-free product recommendation using dense retrieval, collaborative filtering, and large language models (LLMs), grounded in DeepMind's STAR framework.",
             bullets: [
                 "Led the literature review and co-developed the methodological framework, grounding the system in recent advances in zero-shot and retrieval-based recommendation.",
                 "Designed and tested an experimental pipeline integrating CLIP/ViT and SentenceTransformers to assess multimodal alignment strategies.",
                 "Conducted ablation studies and collaborated on testing and evaluation to analyze the effects of embedding configurations, scoring parameters, and prompt formats on recommendation quality.",
                 "Led the final report drafting and the poster presentation, translating technical insights into accessible narratives for diverse audiences."
             ],
-            resourcesLink:
-                "https://drive.google.com/file/d/1ruaWch6242IuS6Oz5qAXAxJtCeciaRW-/view?usp=drive_link"
+            actionButton: {
+                href: 'https://drive.google.com/file/d/1ruaWch6242IuS6Oz5qAXAxJtCeciaRW-/view?usp=drive_link',
+                label: 'Request report',
+                icon: 'carbon:report-data'
+            }
         },
 
         {
@@ -208,8 +215,11 @@ export const portfolioData = {
                 "Conducted performance analysis and ablation studies to assess model robustness and interpretability.",
                 "Co-authored the final report, synthesizing technical insights, evaluation outcomes, and future directions for scalable, interpretable wildfire forecasting."
             ],
-            resourcesLink:
-                "https://drive.google.com/file/d/1A_GaWo9ynqKYUfVtrftKub3_iiRmtQ97/view?usp=sharing"
+            actionButton: {
+                href: "https://drive.google.com/file/d/1A_GaWo9ynqKYUfVtrftKub3_iiRmtQ97/view?usp=sharing",
+                label: 'Request report',
+                icon: 'carbon:report-data'
+            }
         },
 
         {
@@ -238,8 +248,11 @@ export const portfolioData = {
                 "Conducted ablation studies across prompt formats and fine-tuned retriever parameters to improve relevance search.",
                 "Led drafting and delivery of the final system report, synthesizing technical insights and evaluation outcomes."
             ],
-            resourcesLink:
-                "https://drive.google.com/file/d/1Ihw45AsyRrwwqxNuHV_w35zz4K09SEYE/view?usp=drive_link"
+            actionButton: {
+                href: "https://drive.google.com/file/d/1Ihw45AsyRrwwqxNuHV_w35zz4K09SEYE/view?usp=drive_link",
+                label: 'Request report',
+                icon: 'carbon:report-data'
+            }
         },
 
         {
@@ -262,40 +275,75 @@ export const portfolioData = {
                 "Evaluated fairness metrics across demographic groups to highlight disparate impact and potential harms.",
                 "Contributed extensively to the final report and peer review process, ensuring clarity and alignment with Responsible AI principles."
             ],
-            resourcesLink:"",
+            resourcesLink: "",
         },
 
         {
             title: "End-Goal-Oriented Employment Capacity Mapping & Building App",
             repoUrl:
                 "",
-            role: "Founder & Full-Stack/ML Developer",
+            role: "Independent Developer",
             domain:
                 "App Design, Software Development, Product Management, NLP, LLMs",
             techStack: [
                 "Python",
-                "FastAPI",
                 "Java",
-                "MongoDB",
                 "HuggingFace",
-                "SentenceTransformers",
                 "BeautifulSoup",
                 "Selenium"
             ],
             summary:
                 "Ongoing independent project that aim to streamline career planning by aligning individual qualifications with job market demands, mapping skills across job postings, resumes, and course syllabi.",
             bullets: [
-                "Designing and implementing the full front- and backend architecture, including IO schema, data ingestion pipelines, and modular APIs for resume and syllabus parsing.",
-                "Developing matching algorithms that combine keyword heuristics with semantic similarity via dense embeddings and transformer-based models.",
+                "Implementing the full front- and backend architecture, including IO schema, data ingestion pipelines, and modular APIs for resume, syllabus, and job posting parsing.",
                 "Integrating a granular skill-mapping strategy to highlight gaps and strengths across academic, experiential, and aspirational dimensions.",
                 "Building support modules for resume refinement, project tagging, and skill reorganization based on target job criteria.",
                 "Designing a dynamic To-Do generator that outputs personalized actions, projects, and skills to pursue for target roles."
             ],
-            resourcesLink:
-                "mailto:youyouh511@gmail.com?subject=Employment%20Capacity%20App%20-%20Information%20Request"
+            actionButton: {
+                href: "mailto:youyouh511@gmail.com?subject=Employment%20Capacity%20App%20-%20Information%20Request",
+                label: 'Request information',
+                icon: 'mingcute:information-line'
+            }           
         }
     ],
 
 
-    publications: {},
+    publications: [
+        {
+            title: 'Wage-Price Spirals: What is the Historical Evidence?',
+            year: '2024',
+            link: 'http://doi.org/10.1111/ecca.12543',
+            role: 'Co-author',
+            domain: ['Labor Market', 'Inflation'],
+        },
+        {
+            title: 'Coming Down to Earth: How to Tackle Soaring Public Debt',
+            year: '2023',
+            link: 'https://www.imf.org/en/Publications/WEO/Issues/2023/04/11/world-economic-outlook-april-2023',
+            role: 'Research Assistant',
+            domain: ['Public Debt', 'Fiscal Policy'],
+        },
+        {
+            title: 'Wage Dynamics Post-COVID-19 and Wage-Price Spiral Risks',
+            year: '2022',
+            link: 'https://www.imf.org/en/publications/weo/issues/2022/10/11/world-economic-outlook-october-2022',
+            role: 'Research Assistant',
+            domain: ['Labor Market', 'Inflation'],
+        },
+        {
+            title: 'Inflation Scares',
+            year: '2021',
+            link: 'https://www.imf.org/en/Publications/WEO/Issues/2021/10/12/world-economic-outlook-october-2021',
+            role: 'Research Assistant',
+            domain: ['Inflation', 'Monetary Policy'],
+        },
+        {
+            title: 'Recessions and Recoveries in Labor Markets: Patterns, Policies, and Responses to the COVID-19 Shock',
+            year: '2021',
+            link: 'https://www.imf.org/en/Publications/WEO/Issues/2021/03/23/world-economic-outlook-april-2021',
+            role: 'Research Assistant',
+            domain: ['Labor Market'],
+        },
+    ],
 };

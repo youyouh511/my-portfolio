@@ -6,15 +6,15 @@
     border-radius: 12px;
 
     min-height: 100px;
-    padding: 1rem 2.5rem;
+    padding: 0.5rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    margin-top: 2rem;
 
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
-        transform 0.2s ease,
         box-shadow 0.2s ease;
 
     &:hover {
@@ -26,9 +26,12 @@
     }
 }
 
-.infoCard-withLogo {.infoCard_content{
-    padding-left: 6rem; // Additional offset when logo is present
-}
+.infoCard-withLogo {
+    margin-left: 3rem; // Additional offset when logo is present
+
+    .infoCard_content {
+        padding-left: 1.5rem;
+    }
 }
 
 .infoCard-expanded {
@@ -38,7 +41,8 @@
 /* LOGO */
 .infoCard_logo {
     position: absolute;
-    left: 0rem;
+    left: -3rem;
+    top: 1.5rem;
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -58,40 +62,40 @@
 
 /* HEADER */
 .infoCard_header {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 1rem;
 }
 
 .infoCard_headerText {
+    flex: 1;
+    text-align: left;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 
 .infoCard_link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
 }
 
 .infoCard_linkIcon {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--color-link);
 
     transition: transform 0.15s ease, color 0.15s ease;
-}
 
-.infoCard_link:hover .infoCard_linkIcon {
-    transform: translateY(-1px);
-    color: var(--color-link-hover);
+    &:hover {
+        color: var(--color-link-hover);
+    }
 }
 
 /* SUBHEADER */
 .infoCard_subheader {
     display: flex;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 0.35rem;
 }
 
@@ -115,7 +119,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .infoCard_subheaderIcon {
@@ -161,56 +165,71 @@
 /* BULLETS */
 .infoCard_bullets {
     margin-top: 0.5rem;
+    padding-left: 1.2rem;
 
     li {
         line-height: 1.5;
+        margin-bottom: 0.75rem;
         text-align: left;
     }
 }
 
 .infoCard_subbullets {
-    list-style: none;
+    list-style: circle;
     padding-left: 1rem;
     margin: 0.2rem 0;
     color: var(--color-text-dim);
 
     &::before {
-        content: '>';
+        content: '';
         left: -0.9rem;
     }
 }
 
 /* ACTION BUTTON */
 .infoCard_actionButton {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+
     display: inline-flex;
+    align-self: center;
     border-radius: 999px;
     border: 1px solid var(--color-link);
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-dim);
+
+    font-size: 0.85rem;
 }
 
+
 .infoCard_actionButton_link {
-    color: var(--color-link);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+
     text-decoration: none;
 
     transition:
         background-color 0.15s ease,
+        color 0.15s ease,
         border-color 0.15s ease,
         transform 0.1s ease;
 
-    transform: translateY(-1px);
-
     &:hover {
         color: var(--color-link-hover);
-        border: 1px solid var(--color-link-hover);
+        border-color: var(--color-link-hover);
     }
 }
 
-.infoCard_actionButton_icon {}
+.infoCard_actionButton_icon {
+    font-size: 1rem;
+}
+
 
 /* EXPAND / COLLAPSE TOGGLE */
 .infoCard_toggle {
-    margin-top: 0.75rem;
+    margin-top: 0.2rem;
     margin-inline: auto;
     display: inline-flex;
     align-items: center;
@@ -219,14 +238,15 @@
 
     cursor: pointer;
 
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     color: var(--color-text-dim);
+    opacity: 0.6;
 
     transition: color 0.15s ease, transform 0.15s ease, background-color 0.15s ease;
 
     &:hover {
-        color: var(--color-highlight);
-        transform: translateY(-1px);
+        color: var(--color-highlight-dim);
+        transform: translateY(-0.5px);
     }
 }
 
@@ -237,6 +257,12 @@
 .infoCard_toggleText {
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.underliner {
+    margin: 0;
+    height: 0;
+    opacity: 0;
 }
 
 

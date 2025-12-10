@@ -1,225 +1,44 @@
-/* src/sections/projects/Projects.scss */
-
-.proj-section {
+.proj_section {
     min-height: auto;
 }
 
-.proj-inner {
-    margin: 0 auto;
-    max-width: 1100px; // align with Work/Edu
-}
+.proj_title {}
 
-.proj-heading {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
+.proj_cards {
 
-.proj-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-}
+    .infoCard {
+        margin: 2.5rem;
+        padding-bottom: 0;
+        gap: 0;
 
-/* Card – similar to work-card */
-.proj-card {
-    position: relative;
-    border: 2px solid var(--color-bg-pop);
-    border-radius: 12px;
-    padding: 1.5rem 2rem 0rem 2rem;
-    min-height: 100px;
-    background-color: var(--color-bg);
-    backdrop-filter: blur(4px);
+        .infoCard_headerText {
+            margin-bottom: 0;
+            font-size: 1.3rem;
+        }
 
-    transition:
-        transform 0.1s ease,
-        box-shadow 0.1s ease,
-        border-color 0.1s ease,
-        background-color 0.1s ease;
-}
+        .infoCard_subheader {
+            margin-bottom: 0;
 
-.proj-card:hover {
-    background-color: var(--color-bg-pop);
-    border-color: var(--color-link);
-    box-shadow: 0 0 20px 6px var(--color-link-hover);
-}
+            .infoCard_subheaderCol-1 {
+                flex: 1.75;
+                color: var(--color-text-dim);
+            }
 
-.proj-card.expanded {
-    background-color: var(--color-bg-pop);
-}
+            .infoCard_subheaderCol-2 {
+                flex: 1;
+                align-items: flex-end;
+                color: var(--color-highlight);
+            }
 
-/* Header: project title + external link icon */
-.proj-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-}
+            .infoCard_subheaderItem {
+                font-size: 1rem;
+            }
+        }
 
-.proj-title {
-    font-weight: 600;
-    font-size: 1.3rem;
-}
-
-.proj-title-link {
-    text-decoration: none;
-    color: var(--color-text-heading);
-
-    &:hover { // override default link setting
-        text-decoration: none;
-        color: var(--color-text-heading);
-    }
-}
-
-.proj-github-link {
-    display: inline-flex;
-    align-items: center;
-    color: var(--color-link);
-
-    &:hover {
-        color: var(--color-link-hover);
-    }
-}
-
-.proj-meta-icon {
-    font-size: 1rem;
-}
-
-/* Meta row: domain + role */
-.proj-card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 2rem;
-    gap: 1rem;
-}
-
-.proj-domain,
-.proj-role {
-    display: inline-flex;
-    align-items: center;
-    text-align: left;
-    gap: 0.35rem;
-    font-size: 0.95rem;
-}
-
-.proj-domain {
-    color: var(--color-text-dim);
-}
-
-.proj-role {
-    color: var(--color-highlight);
-}
-
-/* Details section (expanded) */
-.proj-details {
-    padding-inline: 3rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.75rem;
-}
-
-/* Tech stack pills */
-.proj-tech {
-    margin-bottom: 0.5rem;
-}
-
-
-.proj-tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-left: 0;
-    margin: 1rem;
-    list-style: none;
-}
-
-.proj-tech-pill {
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    background-color: var(--color-bg-dim);
-    font-size: 0.8rem;
-}
-
-/* Summary + bullets */
-.proj-summary {
-    text-align: left;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.proj-bullets {
-    margin-top: 0.25rem;
-    padding-left: 1.25rem;
-
-    li {
-        margin-bottom: 0.4rem;
-        line-height: 1.5;
-        text-align: left;
-    }
-}
-
-/* Resources button */
-.proj-resources {
-    margin-top: 0.75rem;
-}
-
-.proj-resources-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: 999px;
-    border: 1px solid var(--color-link);
-    background-color: var(--color-bg);
-    color: var(--color-link);
-    font-size: 0.85rem;
-    text-decoration: none;
-
-    &:hover {
-        color: var(--color-link-hover);
-    }
-}
-
-.proj-resources-icon {
-    font-size: 1rem;
-}
-
-/* Toggle button at bottom */
-.proj-toggle {
-    margin-bottom: 0;
-    margin-inline: auto;
-    border: none;
-    background: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    cursor: pointer;
-    font-size: 0.85rem;
-    color: var(--color-text-dim);
-
-    .proj-toggle-icon {
-        font-size: 1.1rem;
-    }
-
-    &:hover {
-        color: var(--color-highlight);
-    }
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    .proj-card {
-        padding-left: 2.2rem;
-    }
-
-    .proj-card-logo {
-        left: -1.5rem;
-    }
-
-    .proj-card-header,
-    .proj-card-meta {
-        flex-direction: column;
-        align-items: flex-start;
+        .infoCard_pills {
+            .pills_title {
+                margin-bottom: 0.5rem;
+            }
+        }
     }
 }

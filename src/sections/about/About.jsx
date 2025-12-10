@@ -101,7 +101,6 @@ const About = () => {
           </div>
         </div>
       )}
-      <hr className='divider' />
     </section>
   );
 };

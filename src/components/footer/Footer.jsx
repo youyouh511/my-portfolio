@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-inner">
         <p className="footer-text">
           © {new Date().getFullYear()} Youyou Huang, 
-          developed with guidance from <strong>GPT 5.1</strong>{" "}
+          developed with assistance from <strong>GPT 5.1</strong>{" "}
           and inspired by{" "}
           <a
             href="https://github.com/saadpasta/developerFolio"

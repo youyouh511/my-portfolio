@@ -1,20 +1,18 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-import { portfolioData } from "../../data/portfolioData";
 import "./Education.scss";
 import InfoCard from "../../components/infoCard/InfoCard";
+import { portfolioData } from "../../data/portfolioData";
 
-const Education_test = () => {
+const Education = () => {
     const edu = portfolioData?.education || [];
 
     if (!edu.length) {
         return (
-            <section id="education" className="edu-section">
-                <div className="edu-inner">
-                    <h1 className="edu-heading">Education</h1>
-                    <p>Education details coming soon.</p>
-                </div>
+            <section id="education" className="edu_section">
+                <h1 className="edu_title">Education</h1>
+                <p>Education details coming soon.</p>
             </section>
         );
     }
@@ -56,4 +54,4 @@ const Education_test = () => {
     );
 };
 
-export default Education_test;
+export default Education;

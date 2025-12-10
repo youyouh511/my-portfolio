@@ -1,0 +1,50 @@
+.pub_section {
+    min-height: auto;
+}
+
+.pub_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+    .infoCard {
+        border-radius: 0px;
+
+        border-color: var(--color-bg-dim);
+        box-shadow: 10px 5px 5px var(--color-bg-dim);
+
+        .infoCard_link {
+            margin-right: -2rem;
+            top: 5%;
+        }
+
+        .infoCard_header {
+
+            .infoCard_headerText {
+                margin-bottom: 0;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        .infoCard_subheader {
+            .infoCard_subheaderCol-1 {
+                flex: 1.75;
+                color: var(--color-highlight);
+            }
+
+            .infoCard_subheaderCol-2 {
+                flex: 1;
+                align-items: flex-end;
+                color: var(--color-text-dim);
+            }
+        }
+
+        .infoCard_pill {
+            &:hover {
+                background-color: var(--color-bg-dim);
+                color: var(--color-text);
+            }
+        }
+    }
+}

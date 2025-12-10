@@ -11,7 +11,7 @@ import PillsCollection from '../pills/PillsCollection';
  *  - **logo**: optional, image path in public folder (string)
  *  - **logoAlt**: alt text for logo
  *  - **header**: main title (school / company / project name)
- *  - **externalLink**: { href: string; ariaLabel?: string; icon?: string }
+ *  - **externalLink**: string;
  *  - **subheader**: {
  *      - **text**: string;
  *      - **icon?**: string;
@@ -154,12 +154,12 @@ const InfoCard = ({
                     <header className="infoCard_header">
                         <h2 className="infoCard_headerText">{header}</h2>
 
-                        {externalLink?.href && (
+                        {externalLink && (
                             <a
-                                href={externalLink.href}
+                                href={externalLink}
                                 target="_blank"
                                 rel="noreferrer"
-                                aria-label={externalLink.ariaLabel || "Open external link"}
+                                aria-label="Open external link"
                                 className="infoCard_link"
                             >
                                 <Icon

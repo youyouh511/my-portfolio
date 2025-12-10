@@ -63,8 +63,12 @@ const InfoCard = ({
     className = "",
 }) => {
 
+
+
     // Check availability of logo
     const hasLogo = !!logo;
+    const basePath = import.meta.env.BASE_URL || "/";
+    const logoUrl = logo ? `${basePath}${logo}` : null;
 
     // Expansion settings
     const [isExpanded, setIsExpanded] = useState(defaultExpanded);
@@ -142,7 +146,7 @@ const InfoCard = ({
             {hasLogo && (
                 <div className="infoCard_logo">
                     <img
-                        src={logo}
+                        src={logoUrl}
                         alt={logoAlt || "logo"}
                         className="infoCard_logoImg"
                     />

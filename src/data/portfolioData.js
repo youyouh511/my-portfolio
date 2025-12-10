@@ -20,7 +20,7 @@ export const portfolioData = {
             github: 'https://github.com/youyouh511'
         },
 
-        lottie: '/portfolio_avatar.json',
+        lottie: 'portfolio_avatar.json',
 
         skills: {
             summaryTitle: "A DATA-DRIVEN BUILDER WITH A PRODUCT MINDSET",
@@ -56,7 +56,7 @@ export const portfolioData = {
     work: [
         {
             company: "International Monetary Fund",
-            logo: "/imf_logo.png",
+            logo: "imf_logo.png",
             location: "Washington, D.C., USA",
             position: "Information Management Assistant / Research Assistant",
             duration: "Jul 2019 — Jun 2023",
@@ -107,7 +107,7 @@ export const portfolioData = {
             ],
             highlight:
                 "Highest Distinction",
-            logo: "/cmu_logo.jpg",
+            logo: "cmu_logo.jpg",
         },
         {
             school: "Georgetown University, School of Foreign Service",
@@ -124,7 +124,7 @@ export const portfolioData = {
                 "Japanese (JLPT N1 Certified)",
             ],
             highlight: "",
-            logo: "/gu_logo.png",
+            logo: "gu_logo.png",
         }
     ],
 

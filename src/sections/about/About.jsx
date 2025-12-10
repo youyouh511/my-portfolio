@@ -8,6 +8,7 @@ import "./About.scss";
 import PillsCollection from "../../components/pills/PillsCollection";
 
 const About = () => {
+  const basePath = import.meta.env.BASE_URL || '/';
 
   // Check existence of data
   const aboutData = portfolioData?.about;
@@ -15,7 +16,7 @@ const About = () => {
   if (!aboutData) {
     return (
       <section id="about" className="about">
-        <h1>Missing Intro</h1>
+        <h1>Greetings</h1>
         <p>Sorry...I am still rehearsing my opening speech.</p>
         <p>Please come back another time.</p>
         <p>Thank you very much for your interest and patience.</p>
@@ -25,17 +26,18 @@ const About = () => {
 
   // Extract data
   const { title, subtitle, paragraphs, contact, lottie, skills } = aboutData;
+  const lottieUrl = lottie ? `${basePath}${lottie}` : null;
   const [animationData, setAnimationData] = useState(null);
 
   // Generic loader for lottie animation
   useEffect(() => {
-    if (!lottie) return;
+    if (!lottieUrl) return;
 
-    fetch(lottie)
+    fetch(lottieUrl)
       .then((res) => res.json())
       .then((data) => setAnimationData(data))
       .catch((err) => console.error("Lottie error:", err));
-  }, [lottie]);
+  }, [lottieUrl]);
 
   // Content display
   return (

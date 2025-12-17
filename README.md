@@ -32,8 +32,5 @@ Preview the publication build locally:
 ```bash
 npm run preview
 ```
-Deploy to GitHub Pages:
-```bash
-npm run deploy
-```
+**GitHub Actions** to deploy automatically to **GitHub Pages**.
 

@@ -1,8 +1,8 @@
 # 🌐 React + Vite Portfolio
 
-View my portfolio at: https://youyouh511.github.io/my-portfolio/
-A personal portfolio website built with **React.js**, powered by **Vite**, deployed by **GitHub Pages**.  
-This project showcases my skills, projects, and experiences in a clean, simple, responsive, and modern design.
+View my portfolio at: https://youyouh511.github.io/my-portfolio/.<br>
+A personal portfolio website built with **React.js**, powered by **Vite**, deployed by **GitHub Pages**.<br>
+This project showcases my skills, projects, and experiences in a clean, simple, responsive, and modern design.<br>
 Developed with assistance from GPT 5.1 and inspired by DeveloperFolio.
 
 ## Features

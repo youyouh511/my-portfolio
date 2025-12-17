@@ -1,16 +1,39 @@
-# React + Vite
+# 🌐 React + Vite Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with **React.js**, powered by **Vite**, deployed by **GitHub Pages**.  
+This project showcases my skills, projects, and experiences in a clean, simple, responsive, and modern design.
+Developed with assistance from GPT 5.1 and inspired by DeveloperFolio.
 
-Currently, two official plugins are available:
+## Features
+- **Vite** for fast dev server and optimized production builds
+- **React.js** for modular and reusable components
+- Responsive design for desktop, pending integration for tablet and mobile displays.
+- Sections for **About Me** (_Intro & Skills_), **Education**, **Projects**, **Work**, and **Publications**
+- Deployed via **GitHub Pages**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation & Setup
 
-## React Compiler
+Clone the repository and install dependencies:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+npm install
+```
+Run the development server:
+```bash
+npm run dev
+```
+Build for production:
+```bash
+npm run build
+```
+Preview the publication build locally:
+```bash
+npm run preview
+```
+Deploy to GitHub Pages:
+```bash
+npm run deploy
+```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
